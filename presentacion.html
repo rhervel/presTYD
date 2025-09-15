@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Tecnología y Digitalización</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://noticias.utpl.edu.ec/sites/default/files/imagenes_editor/imagen_1_0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Add an overlay for readability */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        /* Custom styles for better presentation */
+        .card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-8">
+
+    <main class="w-full max-w-6xl mx-auto">
+        <!-- Slide Container -->
+        <div id="presentation-container">
+            <!-- Slide 1: Welcome -->
+            <div class="slide active card p-8 md:p-12 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-blue-600 mb-4">¡Bienvenidos!</h1>
+            
+                <p class="text-2xl md:text-3xl text-gray-700">Tecnología y Digitalización</p>
+                <p class="mt-4 text-gray-500">Un viaje para crear, innovar y resolver problemas.</p>
+                <p class="mt-8 text-xl text-gray-600">Profesor: Rafael Heredia</p>
+            </div>
+
+            <!-- Slide 2: What is this subject? -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿De qué va esta asignatura?</h2>
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p>Vivimos en un mundo digital. Esta asignatura te prepara para entender el papel de la tecnología en nuestra sociedad y te da las herramientas para ser un participante activo, crítico y responsable.</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>Desarrollaremos <span class="font-semibold text-green-600">competencias digitales</span> para abordar los retos del mundo actual.</li>
+                         <li>Aprenderemos a hacer un uso <span class="font-semibold text-purple-600">sostenible y ético</span> de la tecnología.</li>
+                        <li>Potenciaremos el <span class="font-semibold text-orange-600">pensamiento computacional</span> y la <span class="font-semibold text-orange-600">creatividad</span> a través de proyectos prácticos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 3: Main Blocks -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿Qué vamos a explorar?</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-blue-700">A. Proceso de Resolución de Problemas</h3>
+                        <p>Es el eje de todo. Aprenderemos un método para pasar de una idea a una solución real y funcional.</p>
+                    </div>
+                     <div class="bg-orange-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-orange-700">B. Digitalización del Entorno</h3>
+                        <p>Dominaremos las herramientas digitales que usamos cada día para aprender mejor y de forma más segura.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-purple-700">C. Pensamiento Computacional y Robótica</h3>
+                        <p>¡A programar! Crearemos algoritmos, apps sencillas y daremos vida a robots.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-green-700">D. Comunicación y Difusión</h3>
+                        <p>Usaremos herramientas digitales para presentar y compartir nuestras ideas y proyectos de forma efectiva.</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg md:col-span-2">
+                        <h3 class="font-bold text-red-700">E. Tecnología Sostenible</h3>
+                        <p>Analizaremos el impacto de la tecnología y buscaremos soluciones que cuiden nuestro planeta y nuestra sociedad.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: 2nd Year ESO -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">¿Qué haremos en 2º de la ESO?</h2>
+                <p class="text-center text-gray-500 mb-6">¡Manos a la obra!</p>
+                <ul class="text-lg text-gray-700 list-disc list-inside space-y-3">
+                    <li><span class="font-semibold">Resolver problemas y misterios tecnológicos:</span> Aprenderemos a investigar y definir un problema paso a paso.</li>
+                    <li><span class="font-semibold">Construir estructuras:</span> Diseñaremos y crearemos modelos simples, entendiendo cómo resisten fuerzas.</li>
+                    <li><span class="font-semibold">Jugar con mecanismos:</span> Montaremos palancas, poleas y engranajes para ver cómo funcionan.</li>
+                    <li><span class="font-semibold">Circuitos eléctricos básicos:</span> Haremos nuestros primeros montajes para que la electricidad fluya.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5: NEW 2nd Year ESO Saberes y Criterios -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">2º ESO: Saberes y Criterios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-xl text-blue-700 mb-3">Saberes Básicos (Lo que estudiaremos)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Fases de un proyecto tecnológico.</li>
+                            <li>Operadores mecánicos (palancas, poleas...).</li>
+                            <li>Estructuras y sus esfuerzos (tracción, compresión).</li>
+                            <li>Circuitos eléctricos básicos y su simbología.</li>
+                            <li>Materiales técnicos y sus propiedades.</li>
+                            <li>Uso seguro de herramientas de taller.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-green-700 mb-3">Criterios de Evaluación (Lo que demostraremos)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Describir las fases de un proyecto.</li>
+                            <li>Seleccionar materiales adecuados para un prototipo.</li>
+                            <li>Construir estructuras y mecanismos simples.</li>
+                            <li>Diseñar y montar circuitos eléctricos básicos.</li>
+                            <li>Utilizar herramientas de forma segura.</li>
+                            <li>Comunicar ideas y soluciones de forma efectiva.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="mt-6 text-center">
+                    <a href="BOJA23-104-00246-9727-02_00284752.pdf" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                        Ver Documento Oficial (BOJA)
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Slide 6: 3rd Year ESO -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">¿Qué haremos en 3º de la ESO?</h2>
+                <p class="text-center text-gray-500 mb-6">Subimos de nivel.</p>
+                <ul class="text-lg text-gray-700 list-disc list-inside space-y-3">
+                    <li><span class="font-semibold">Proyectos más complejos:</span> Seguiremos resolviendo problemas, pero con más autonomía y creatividad.</li>
+                    <li><span class="font-semibold">Electricidad y electrónica:</span> Profundizaremos en el montaje de circuitos, usando simuladores y componentes reales.</li>
+                    <li><span class="font-semibold">Uso de herramientas y fabricación:</span> Aprenderemos a manejar herramientas y nos iniciaremos en la fabricación digital.</li>
+                    <li><span class="font-semibold">Mentalidad emprendedora:</span> Desarrollaremos la resiliencia y la creatividad para ver los problemas como oportunidades.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 7: NEW 3rd Year ESO Saberes y Criterios -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">3º ESO: Saberes y Criterios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-xl text-blue-700 mb-3">Saberes Básicos (Profundizamos en...)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Iniciación a la programación por bloques.</li>
+                            <li>Componentes electrónicos (resistencias, LED...).</li>
+                            <li>Instalaciones en viviendas (electricidad, agua).</li>
+                            <li>Metrología y representación gráfica (acotación).</li>
+                            <li>Plásticos, metales y maderas: propiedades y técnicas.</li>
+                            <li>Fabricación digital y control por ordenador.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-green-700 mb-3">Criterios de Evaluación (Llevamos las habilidades a otro nivel)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Resolver problemas ideando prototipos.</li>
+                            <li>Aplicar principios de la electricidad y electrónica.</li>
+                            <li>Representar objetos y sistemas técnicos.</li>
+                            <li>Mecanizar materiales con máquinas y herramientas.</li>
+                            <li>Crear programas sencillos para resolver tareas.</li>
+                             <li>Analizar y describir instalaciones de una vivienda.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="mt-6 text-center">
+                    <a href="BOJA23-104-00246-9727-02_00284752.pdf" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                        Ver Documento Oficial (BOJA)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 8: How will we work? -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿Cómo vamos a trabajar?</h2>
+                <div class="w-full text-lg text-gray-700 space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-blue-500 mr-3 text-2xl">➔</span>
+                        <p><span class="font-bold">Aprendizaje Basado en Proyectos:</span> La mejor forma de aprender es haciendo. Tendremos retos que resolver. </p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-blue-500 mr-3 text-2xl">➔</span>
+                        <p><span class="font-bold">Trabajo cooperativo:</span> Juntos llegamos más lejos. Aprenderemos a colaborar en equipo de forma eficaz.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-blue-500 mr-3 text-2xl">➔</span>
+                        <p><span class="font-bold">Uso de herramientas digitales:</span> Diseñaremos en 3D, simularemos circuitos y usaremos apps para comunicar nuestras ideas.</p>
+                    </div>
+                     <div class="flex items-start">
+                        <span class="text-blue-500 mr-3 text-2xl">➔</span>
+                        <p><span class="font-bold">Creatividad y experimentación:</span> No hay una única solución. Buscaremos caminos originales y no tendremos miedo a equivocarnos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Evaluation -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿Cómo se evaluará?</h2>
+                <div class="grid grid-cols-2 gap-6 text-center">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-blue-600">40%</p>
+                        <h3 class="font-semibold mt-2">Proyecto Tecnológico</h3>
+                        <p class="text-sm text-gray-600">El trabajo práctico en proyectos será lo más importante.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-green-600">30%</p>
+                        <h3 class="font-semibold mt-2">Pruebas y Prácticas</h3>
+                        <p class="text-sm text-gray-600">Demostrarás lo que sabes con pruebas escritas y prácticas.</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-orange-600">20%</p>
+                        <h3 class="font-semibold mt-2">Observación Continua</h3>
+                        <p class="text-sm text-gray-600">Tu participación, actitud y trabajo en equipo cuentan.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-purple-600">10%</p>
+                        <h3 class="font-semibold mt-2">Autoevaluación</h3>
+                        <p class="text-sm text-gray-600">Reflexionarás sobre tu propio aprendizaje y el de tus compañeros.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Materials -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿Qué necesitarás?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                    <div>
+                        <h3 class="font-semibold text-blue-700 mb-3 text-center">🎒 En tu mochila</h3>
+                        <ul class="space-y-3 text-gray-700">
+                           <li class="flex items-center"><span class="text-2xl mr-3">📓</span> Cuaderno (de cuadritos).</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">✏️</span> Lápiz, goma y bolígrafos.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">📐</span> Regla, escuadra y cartabón.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">💾</span> Pendrive.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">🎧</span> Auriculares (con cable).</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">💡</span> ¡Muchas ganas de crear!</li>
+                        </ul>
+                    </div>
+                    <div class="border-t md:border-t-0 md:border-l border-gray-200 pt-6 md:pt-0 md:pl-8">
+                        <h3 class="font-semibold text-green-700 mb-3 text-center">🛠️ En el aula-taller</h3>
+                         <ul class="space-y-3 text-gray-700">
+                           <li class="flex items-center"><span class="text-2xl mr-3">💻</span> Ordenadores y tabletas.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">🤖</span> Componentes de robótica.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">🔩</span> Herramientas y máquinas.</li>
+                           <li class="flex items-center"><span class="text-2xl mr-3">🪵</span> Materiales (madera, plástico...).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Recommendations -->
+            <div class="slide card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Recomendaciones para el curso</h2>
+                <div class="space-y-4 text-lg text-gray-700">
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                        <span class="text-3xl mr-4">💬</span>
+                        <div><span class="font-bold">Participa activamente:</span> Involúcrate en clase y en los trabajos de grupo. ¡Tu voz es importante!</div>
+                    </div>
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                        <span class="text-3xl mr-4">🎨</span>
+                        <div><span class="font-bold">Sé creativo y emprendedor:</span> Aporta ideas, no tengas miedo a probar cosas nuevas y busca soluciones originales.</div>
+                    </div>
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                        <span class="text-3xl mr-4">🔎</span>
+                        <div><span class="font-bold">Presta atención a los detalles:</span> En tecnología, los pequeños errores pueden marcar la diferencia.</div>
+                    </div>
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                        <span class="text-3xl mr-4">🤝</span>
+                        <div><span class="font-bold">Colabora con tus compañeros:</span> Aprender a trabajar en equipo será clave para tu éxito.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Why is it important? -->
+            <div class="slide card p-8 md:p-12">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">¿Por qué es importante para ti?</h2>
+                 <p class="text-lg text-center text-gray-600 mb-8">Esta asignatura te dará "superpoderes" para el futuro:</p>
+                 <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">🔍</p>
+                        <p class="font-semibold mt-2">Ser un detective digital</p>
+                     </div>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">💡</p>
+                        <p class="font-semibold mt-2">Solucionar problemas con creatividad</p>
+                     </div>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">🛠️</p>
+                        <p class="font-semibold mt-2">Construir tus propias ideas</p>
+                     </div>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">🤖</p>
+                        <p class="font-semibold mt-2">Programar y controlar robots</p>
+                     </div>
+                      <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">📱</p>
+                        <p class="font-semibold mt-2">Entender la tecnología que usas</p>
+                     </div>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-3xl">🌍</p>
+                        <p class="font-semibold mt-2">Usar la tecnología para un mundo mejor</p>
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Slide 13: Final -->
+            <div class="slide card p-8 md:p-12 text-center">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">¿Preguntas?</h2>
+                <p class="text-2xl text-blue-600 font-semibold">¡Juntos, vamos a aprender, crear y disfrutar!</p>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between mt-8">
+            <button id="prevBtn" class="bg-white text-blue-600 font-bold py-2 px-6 rounded-full shadow-md hover:bg-blue-50 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                Anterior
+            </button>
+            <div id="slide-counter" class="flex items-center text-gray-600 font-semibold"></div>
+            <button id="nextBtn" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-blue-700 transition">
+                Siguiente
+            </button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                // Show the target slide
+                slides[n].classList.add('active');
+                updateNav();
+            }
+
+            function updateNav() {
+                // Update slide counter
+                slideCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+
+                // Update button states
+                if (currentSlide === 0) {
+                    prevBtn.disabled = true;
+                } else {
+                    prevBtn.disabled = false;
+                }
+
+                if (currentSlide === slides.length - 1) {
+                    nextBtn.textContent = 'Finalizar';
+                } else {
+                    nextBtn.textContent = 'Siguiente';
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial setup
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
+
